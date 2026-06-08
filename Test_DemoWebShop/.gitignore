@@ -1,0 +1,16 @@
+.gradle
+
+bin
+
+Reports
+
+Libs
+
+!output/.gitkeep
+build
+
+.classpath
+
+.project
+
+.cache

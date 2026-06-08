@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test_DemoWebShop</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8fd594c3-3aaf-4e17-9c0b-95e42aa416de</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>e7ea7dcd-ddd1-4579-8320-43a0720325c5</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ItemData</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>15a6ffbd-ca26-44bd-b602-fde366a818da</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ItemData</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>order</value>
+      <variableId>884d3b1c-17dd-4472-848f-247d20980a70</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>itemsWithQuantity</value>
+      <variableId>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>884d3b1c-17dd-4472-848f-247d20980a70</id>
+      <masked>false</masked>
+      <name>order</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</id>
+      <masked>false</masked>
+      <name>itemsWithQuantity</name>
+   </variable>
+</TestCaseEntity>

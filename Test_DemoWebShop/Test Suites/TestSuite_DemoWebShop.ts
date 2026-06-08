@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TestSuite_DemoWebShop</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>3</numberOfRerun>
+   <pageLoadTimeout>10</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>c8c504f8-56ca-4830-8eeb-4a6395ef1577</testSuiteGuid>
+   <testCaseLink>
+      <guid>7d64477a-e43e-469e-9b69-f7753925e29e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Test_DemoWebShop</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>2f53df37-c562-4838-aa36-a52648905bbf</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/ItemData</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>2f53df37-c562-4838-aa36-a52648905bbf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>order</value>
+         <variableId>884d3b1c-17dd-4472-848f-247d20980a70</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>2f53df37-c562-4838-aa36-a52648905bbf</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>itemsWithQuantity</value>
+         <variableId>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
