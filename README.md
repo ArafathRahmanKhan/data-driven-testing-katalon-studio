@@ -4,7 +4,7 @@ This is a katalon studio project to demostrate how to perform Data Driven Testin
 We'll be testing "https://demowebshop.tricentis.com/" website for the testing purpose.
 
 A demo video explaining the project structure and funtionalities can be found the video present here:
-https://drive.google.com/file/d/1bZUJ8bjMa7Tqn3z9sVQ5oEj88igEWX3w/view?usp=drive_link
+https://drive.google.com/file/d/1PBVF0ffYnwJQuZOXqRtcuUrxFRZ25ff3/view?usp=sharing 
 
 To run this project:
 - Download the Test_DemoWebShop project folder
