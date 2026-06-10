@@ -31,7 +31,7 @@ public class saveDataToExcel {
 	@Keyword
 	def saveOrderNumber(String orderNumber, ArrayList resultArrayList) {
 		//initializing the file system framework to save order id into an excel
-		String outputExcelPath = 'C:\\Users\\Riseup\\Katalon Studio\\Test_Demo\\Result\\OrderDetails.xlsx'
+		String outputExcelPath = 'C:\\Users\\Riseup\\Katalon Studio\\Test_DemoWebShop\\Result\\OrderDetails.xlsx'
 		File outputFile = new File(outputExcelPath)
 		
 		if(outputFile.exists()) {

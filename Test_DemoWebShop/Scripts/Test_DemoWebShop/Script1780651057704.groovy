@@ -15,6 +15,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+
+import groovy.sql.Sql
 import internal.GlobalVariable as GlobalVariable
 import org.apache.poi.ss.usermodel.Sheet as Sheet
 import org.apache.poi.ss.usermodel.Cell as Cell
@@ -132,6 +134,7 @@ if(orderConfirmationStatus) {
 } else {
 	resultArrayList.add("Not Confirmed")
 }
+println(resultArrayList)
 //getting the order number
 String orderNumberText = WebUI.getText(findTestObject('Object Repository/DemoWebShop/Page_Checkout/text_orderNumber'))
 
@@ -141,7 +144,7 @@ String orderNumber = orderNumberText.split(': ')[1]
 WebUI.click(findTestObject('Object Repository/DemoWebShop/Page_Checkout/a_orderDetails'))
 
 //taking screenshots of the order details page
-String ssPath = 'C:\\Users\\Riseup\\Katalon Studio\\Test_Demo\\ScreenShots\\'+orderNumber+'.png'
+String ssPath = 'C:\\Users\\Riseup\\Katalon Studio\\Test_DemoWebShop\\ScreenShots\\'+orderNumber+'.png'
 WebUI.takeFullPageScreenshot(ssPath)
 
 //click to download pdf
@@ -168,15 +171,38 @@ if(pdfFound) {
 	resultArrayList.add("downloaded " + expectedFileName)
 	foundFile.delete()
 } else {
-	resultArrayList.add("not downloaded")
+	resultArrayList.add("Could'nt download " + expectedFileName)
 }
 
 
 //saving the output in another excel file
 CustomKeywords.'helpers.saveDataToExcel.saveOrderNumber'(orderNumber, resultArrayList)
 
+//-----------saving output into DataBase---------------------
+// Connection settings
+//def dbUrl = 'jdbc:mysql://sql12.freesqldatabase.com/sql12829951'
+//def username = 'sql12829951'
+//def password = '4gQ3lGtAK9'
+//def driver = 'com.mysql.cj.jdbc.Driver'
+
+// Open database connection
+def sql = Sql.newInstance(dbURL, dbUsername, dbPassword, dbDriver)
+
+if(sql) {
+	println("DB Connection established.")
+} else {
+	println("DB Connection failed!")
+}
+
+// Run the insert command
+def query = "INSERT INTO `OrderDetails` (`Order Number`, `Login Status`, `Products Addded-to-cart`, `Shipping Method`, `Order Status`, `PDF Download Status`) VALUES (?, ?, ?, ?, ?, ?);"
+sql.executeInsert(query, [orderNumber, resultArrayList[0], resultArrayList[1], resultArrayList[2], resultArrayList[3], resultArrayList[4]])
+
+//Close the connection
+sql.close()
+println("Data written to database successfully!")
+
 //closing the browser
 WebUI.delay(1)
-
 WebUI.closeBrowser()
 

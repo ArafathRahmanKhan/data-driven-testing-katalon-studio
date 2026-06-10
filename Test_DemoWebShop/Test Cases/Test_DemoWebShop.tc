@@ -8,60 +8,66 @@
    <testCaseGuid>8fd594c3-3aaf-4e17-9c0b-95e42aa416de</testCaseGuid>
    <testDataLinks>
       <combinationType>ONE</combinationType>
-      <id>e7ea7dcd-ddd1-4579-8320-43a0720325c5</id>
+      <id>b5628391-ea57-49ef-9a54-7331300d9014</id>
       <iterationEntity>
          <iterationType>ALL</iterationType>
          <value></value>
       </iterationEntity>
-      <testDataId>Data Files/ItemData</testDataId>
-   </testDataLinks>
-   <testDataLinks>
-      <combinationType>ONE</combinationType>
-      <id>15a6ffbd-ca26-44bd-b602-fde366a818da</id>
-      <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
-      </iterationEntity>
-      <testDataId>Data Files/ItemData</testDataId>
-   </testDataLinks>
-   <testDataLinks>
-      <combinationType>ONE</combinationType>
-      <id>dbaebf67-bced-4936-b511-6b162c39833e</id>
-      <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
-      </iterationEntity>
-      <testDataId>Data Files/ItemData</testDataId>
+      <testDataId>Data Files/TestDataFromDB</testDataId>
    </testDataLinks>
    <variableLinks>
-      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <testDataLinkId>b5628391-ea57-49ef-9a54-7331300d9014</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>order</value>
       <variableId>884d3b1c-17dd-4472-848f-247d20980a70</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <testDataLinkId>b5628391-ea57-49ef-9a54-7331300d9014</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>itemsWithQuantity</value>
       <variableId>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <testDataLinkId>b5628391-ea57-49ef-9a54-7331300d9014</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>countryCode</value>
       <variableId>02e4ae6d-5ea8-49c2-b43e-0bc4577a1d88</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <testDataLinkId>b5628391-ea57-49ef-9a54-7331300d9014</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>zipCode</value>
       <variableId>6788d836-54e6-4d23-adcf-cc8d5be5aa59</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <testDataLinkId>b5628391-ea57-49ef-9a54-7331300d9014</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>shippingMethod</value>
       <variableId>e3110f6a-2362-4676-bc4f-6b8f42819655</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9e8528bf-eb70-4bd6-a72b-49d2b6011041</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>11b661cc-1913-40d7-a3f6-ead2b73e3dea</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ce8ad06d-ce07-4477-bf18-f526b16325c4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>8ca83151-0ebd-429b-b948-d06629318b95</variableId>
    </variableLinks>
    <variable>
       <defaultValue>0</defaultValue>
@@ -97,5 +103,33 @@
       <id>e3110f6a-2362-4676-bc4f-6b8f42819655</id>
       <masked>false</masked>
       <name>shippingMethod</name>
+   </variable>
+   <variable>
+      <defaultValue>'jdbc:mysql://sql12.freesqldatabase.com/sql12829951'</defaultValue>
+      <description></description>
+      <id>9e8528bf-eb70-4bd6-a72b-49d2b6011041</id>
+      <masked>false</masked>
+      <name>dbURL</name>
+   </variable>
+   <variable>
+      <defaultValue>'sql12829951'</defaultValue>
+      <description></description>
+      <id>11b661cc-1913-40d7-a3f6-ead2b73e3dea</id>
+      <masked>false</masked>
+      <name>dbUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>'4gQ3lGtAK9'</defaultValue>
+      <description></description>
+      <id>ce8ad06d-ce07-4477-bf18-f526b16325c4</id>
+      <masked>false</masked>
+      <name>dbPassword</name>
+   </variable>
+   <variable>
+      <defaultValue>'com.mysql.cj.jdbc.Driver'</defaultValue>
+      <description></description>
+      <id>8ca83151-0ebd-429b-b948-d06629318b95</id>
+      <masked>false</masked>
+      <name>dbDriver</name>
    </variable>
 </TestCaseEntity>
