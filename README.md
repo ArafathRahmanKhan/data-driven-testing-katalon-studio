@@ -14,9 +14,9 @@ https://drive.google.com/file/d/1PBVF0ffYnwJQuZOXqRtcuUrxFRZ25ff3/view?usp=shari
   - perform checkout
   - confirm order
 - Order PDF download verification
-- 
+- more coming soon...
 
-##How to run this project
+## How to run this project
 - Download and Install Katalon Studio from here: https://katalon.com/download
 - Download the Test_DemoWebShop project folder
 - Open Katalon Studio
