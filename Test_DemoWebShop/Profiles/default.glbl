@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'jd97@test.com'</initValue>
+      <initValue>'jd98@test.com'</initValue>
       <name>G_username</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
@@ -15,6 +15,13 @@
       <description></description>
       <initValue>'/wA5vvMQLVk='</initValue>
       <name>G_password</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://demowebshop.tricentis.com/'</initValue>
+      <name>G_BaseURL</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>

@@ -24,6 +24,15 @@
       </iterationEntity>
       <testDataId>Data Files/ItemData</testDataId>
    </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>dbaebf67-bced-4936-b511-6b162c39833e</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ItemData</testDataId>
+   </testDataLinks>
    <variableLinks>
       <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
       <type>DATA_COLUMN</type>
@@ -35,6 +44,24 @@
       <type>DATA_COLUMN</type>
       <value>itemsWithQuantity</value>
       <variableId>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>countryCode</value>
+      <variableId>02e4ae6d-5ea8-49c2-b43e-0bc4577a1d88</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>zipCode</value>
+      <variableId>6788d836-54e6-4d23-adcf-cc8d5be5aa59</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>e7ea7dcd-ddd1-4579-8320-43a0720325c5</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>shippingMethod</value>
+      <variableId>e3110f6a-2362-4676-bc4f-6b8f42819655</variableId>
    </variableLinks>
    <variable>
       <defaultValue>0</defaultValue>
@@ -49,5 +76,26 @@
       <id>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</id>
       <masked>false</masked>
       <name>itemsWithQuantity</name>
+   </variable>
+   <variable>
+      <defaultValue>10</defaultValue>
+      <description></description>
+      <id>02e4ae6d-5ea8-49c2-b43e-0bc4577a1d88</id>
+      <masked>false</masked>
+      <name>countryCode</name>
+   </variable>
+   <variable>
+      <defaultValue>'1000'</defaultValue>
+      <description></description>
+      <id>6788d836-54e6-4d23-adcf-cc8d5be5aa59</id>
+      <masked>false</masked>
+      <name>zipCode</name>
+   </variable>
+   <variable>
+      <defaultValue>'0'</defaultValue>
+      <description></description>
+      <id>e3110f6a-2362-4676-bc4f-6b8f42819655</id>
+      <masked>false</masked>
+      <name>shippingMethod</name>
    </variable>
 </TestCaseEntity>

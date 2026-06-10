@@ -38,5 +38,23 @@
          <value>itemsWithQuantity</value>
          <variableId>644c50fd-8e5a-44d3-8ef8-e9ff41ffd227</variableId>
       </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>02e4ae6d-5ea8-49c2-b43e-0bc4577a1d88</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>6788d836-54e6-4d23-adcf-cc8d5be5aa59</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e3110f6a-2362-4676-bc4f-6b8f42819655</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>
