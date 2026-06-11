@@ -3,6 +3,10 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import java.util.logging.Level
+import java.util.logging.Logger
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -11,7 +15,8 @@ import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
-import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.testobject.TestObject
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
@@ -169,7 +174,8 @@ if(files != null) {
 
 if(pdfFound) {
 	resultArrayList.add("downloaded " + expectedFileName)
-	foundFile.delete()
+	//deleteing the pdf
+	//foundFile.delete()
 } else {
 	resultArrayList.add("Could'nt download " + expectedFileName)
 }
@@ -201,6 +207,42 @@ sql.executeInsert(query, [orderNumber, resultArrayList[0], resultArrayList[1], r
 //Close the connection
 sql.close()
 println("Data written to database successfully!")
+
+
+
+//---------------------------validating PDF data-------------------------//
+//ignoring PDFBox font warning
+Logger.getLogger("org.apache.fontbox").setLevel(Level.OFF)
+Logger.getLogger("org.apache.pdfbox").setLevel(Level.OFF)
+//Defining the path to downloaded PDF
+String pdfFilePath = "C:\\Users\\Riseup\\Downloads\\" + expectedFileName
+
+//Read the text inside the PDF using custom keyword
+String pdfContent = CustomKeywords.'helpers.PDFReaders.getPdfText'(pdfFilePath)
+
+//Validate that the contents exists inside the PDF content
+boolean isOrderIdPresent = pdfContent.contains(orderNumber)
+boolean IsCustomerNamePresent = pdfContent.contains("John Doe")
+boolean isShippingMethodPresent = pdfContent.contains(resultArrayList[2])
+
+//Throwing errors if verification fails
+if (!isOrderIdPresent) {
+	KeywordUtil.markFailed("Validation Failed: Order ID " + orderNumber + " not found in PDF!")
+} else {
+	KeywordUtil.logInfo("Success: Order ID matches.")
+}
+
+if (!IsCustomerNamePresent) {
+	KeywordUtil.markFailed("Validation Failed: Total Amount " + "John Doe" + " not found in PDF!")
+} else {
+	KeywordUtil.logInfo("Success: Customer Name Matches.")
+}
+
+if (!isShippingMethodPresent) {
+	KeywordUtil.markFailed("Validation Failed: Shipping Method " + resultArrayList[2] + " not found in PDF!")
+} else {
+	KeywordUtil.logInfo("Success: Shipping Method matches.")
+}
 
 //closing the browser
 WebUI.delay(1)
