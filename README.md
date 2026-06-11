@@ -14,6 +14,7 @@ https://drive.google.com/file/d/1PBVF0ffYnwJQuZOXqRtcuUrxFRZ25ff3/view?usp=shari
   - perform checkout
   - confirm order
 - Order PDF download verification
+- PDF content verification
 - more coming soon...
 
 ## How to run this project
